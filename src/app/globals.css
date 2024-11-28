@@ -2,20 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.app {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #2c2c2c;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1 {
+  text-align: center;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.todo-list {
+  margin: 20px 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #444;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background: #06f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0051aa;
 }
